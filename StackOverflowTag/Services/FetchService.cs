@@ -16,11 +16,11 @@ namespace StackOverflowTag.Services
 
         public async Task FetchTags(int amount)
         {
-            int page = 1;
+            int page = 0;
             List<Tag?> tagModels = new List<Tag?>();
-            while (page * 100 <= amount)
+            while (page * 100 < amount)
             {
-                var tags = await _tagApiService.FetchTagsFromPage(page++);
+                var tags = await _tagApiService.FetchTagsFromPage(++page);
                 tagModels.AddRange(tags);
             }
             _tagCacheService.CacheTags(tagModels);
