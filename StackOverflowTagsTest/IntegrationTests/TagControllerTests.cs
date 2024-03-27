@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace StackOverflowTagsTest
+namespace StackOverflowTagsTest.IntegrationTests
 {
     public class TagControllerTests : IClassFixture<WebApplicationFactory<Program>>
     {

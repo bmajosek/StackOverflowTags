@@ -3,7 +3,7 @@ using Microsoft.Extensions.Caching.Memory;
 using StackOverflowTag.Class.Model;
 using StackOverflowTag;
 
-namespace StackOverflowTagsTest
+namespace StackOverflowTagsTest.UnitTests
 {
     public class TagRepositoryTests
     {

@@ -3,7 +3,7 @@ using StackOverflowTag.Class.Model;
 using StackOverflowTag.Services;
 using StackOverflowTag;
 
-namespace StackOverflowTagsTest
+namespace StackOverflowTagsTest.UnitTests
 {
     public class TagCacheServiceTests
     {
