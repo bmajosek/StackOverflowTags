@@ -32,3 +32,26 @@ The OpenAPI specification is included in the project.
 ### Testing
 
 The project includes unit tests for services and integration tests for API.
+
+### Running Tests
+Ensure .NET 8 SDK is installed. In the project's root directory, compile the solution:
+```
+dotnet build
+```
+To run unit tests:
+```
+dotnet test --filter Category=UnitTest
+```
+For integration tests:
+```
+dotnet test --filter Category=IntegrationTest
+```
+Run all tests without filtering:
+```
+dotnet test
+```
+Generate a detailed test report with:
+```
+dotnet test --logger "trx;LogFileName=TestResults.trx"
+```
+
