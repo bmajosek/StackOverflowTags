@@ -55,10 +55,11 @@ Generate a detailed test report with:
 dotnet test --logger "trx;LogFileName=TestResults.trx"
 ```
 
+<center>
 | Area | Technology |
 |---|---|
 | Environment | `.NET 8.0` |
 | Contenerization | `Docker` |
 | Testing | `xUnit.net` |
 | Logger | `Serilog` |
-
+</center>
