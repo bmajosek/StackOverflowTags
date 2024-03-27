@@ -21,15 +21,19 @@ jobs:
       
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: ./StackOverflowTag
     
     - name: Build
       run: dotnet build --no-restore
+      working-directory: ./StackOverflowTag
     
     - name: Unit Tests
       run: dotnet test --no-restore --verbosity normal --filter Category=UnitTest
+      working-directory: ./StackOverflowTagsTest
     
     - name: Integration Tests
       run: dotnet test --no-restore --verbosity normal --filter Category=IntegrationTest
+      working-directory: ./StackOverflowTagsTest
 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
