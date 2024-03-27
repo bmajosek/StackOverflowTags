@@ -8,6 +8,7 @@ namespace StackOverflowTagsTest
     public class TagCacheServiceTests
     {
         [Fact]
+        [Trait("Category", "UnitTest")]
         public void CacheTags_CheckIfProperlyReturns_CachesTagsWithCorrectPercentage()
         {
             // Arrange

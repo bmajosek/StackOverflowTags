@@ -2,7 +2,6 @@ using StackOverflowTag.Services;
 using Microsoft.Extensions.Caching.Memory;
 using StackOverflowTag.Class.Model;
 using StackOverflowTag;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace StackOverflowTagsTest
 {
@@ -18,6 +17,7 @@ namespace StackOverflowTagsTest
         }
 
         [Fact]
+        [Trait("Category", "UnitTest")]
         public async Task GetPaginationTags_CheckIfProperlyReturns_ReturnsPaginatedSortedTags()
         {
             // Arrange

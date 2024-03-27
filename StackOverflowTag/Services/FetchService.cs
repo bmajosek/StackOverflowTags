@@ -21,7 +21,14 @@ namespace StackOverflowTag.Services
             while (page * 100 < amount)
             {
                 var tags = await _tagApiService.FetchTagsFromPage(++page);
-                tagModels.AddRange(tags);
+                if (tags != null)
+                {
+                    tagModels.AddRange(tags);
+                }
+                else
+                {
+                    break;
+                }
             }
             _tagCacheService.CacheTags(tagModels);
         }
