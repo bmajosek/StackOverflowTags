@@ -1,13 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Caching.Memory;
-using Serilog;
-using StackOverflowTag.Class.DTO;
 using StackOverflowTag.Services.Interface;
 
 namespace StackOverflowTag.Controllers
 {
     [ApiController]
-    [Route("/api/[controller]")]
+    [Route("/api/[controller]/")]
     public class TagController : ControllerBase
     {
         private readonly ITagRepository _tagRepository;
@@ -30,9 +27,14 @@ namespace StackOverflowTag.Controllers
             return Ok(tags);
         }
 
-        [HttpPost("/retrieve")]
+        [HttpPost("retrieve")]
         public async Task<IActionResult> RetrieveTags([FromQuery] int amount)
         {
+            if (amount <= 0)
+            {
+                return BadRequest("amount should be grater than 0");
+            }
+
             await _fetchService.FetchTags(amount);
 
             return Ok("Tags are fetched.");

@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-
-namespace StackOverflowTag.Services.Interface
+﻿namespace StackOverflowTag.Services.Interface
 {
     public interface ITagService : IHostedService
     {

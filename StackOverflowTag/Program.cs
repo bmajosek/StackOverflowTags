@@ -29,10 +29,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddMemoryCache();
 builder.Services.AddHostedService<TagService>();
-builder.Services.AddScoped<IFetchService, FetchService>();
-builder.Services.AddScoped<ITagApiService, TagApiService>();
-builder.Services.AddScoped<ITagCacheService, TagCacheService>();
-builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddSingleton<IFetchService, FetchService>();
+builder.Services.AddSingleton<ITagApiService, TagApiService>();
+builder.Services.AddSingleton<ITagCacheService, TagCacheService>();
+builder.Services.AddSingleton<ITagRepository, TagRepository>();
 
 var app = builder.Build();
 
@@ -44,3 +44,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program
+{ }

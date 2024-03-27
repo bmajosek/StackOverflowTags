@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace StackOverflowTag.Class.Model
+﻿namespace StackOverflowTag.Class.Model
 {
     public class Tag
     {

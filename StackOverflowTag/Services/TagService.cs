@@ -1,8 +1,4 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-using Serilog;
-using StackOverflowTag.Class.DTO;
-using StackOverflowTag.Services.Interface;
-using System.Text.Json;
+﻿using StackOverflowTag.Services.Interface;
 
 namespace StackOverflowTag.Services
 {

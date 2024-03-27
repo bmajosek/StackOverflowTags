@@ -1,5 +1,4 @@
-﻿using StackOverflowTag.Class.DTO;
-using StackOverflowTag.Class.Model;
+﻿using StackOverflowTag.Class.Model;
 
 namespace StackOverflowTag.Services.Interface
 {

@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
-using Serilog;
-using StackOverflowTag.Class.DTO;
 using StackOverflowTag.Class.Model;
 using StackOverflowTag.Services.Interface;
 
