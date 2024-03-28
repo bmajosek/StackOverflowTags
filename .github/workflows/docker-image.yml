@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '8.0.x'
       
@@ -34,6 +34,9 @@ jobs:
     - name: Integration Tests
       run: dotnet test --no-restore --verbosity normal --filter Category=IntegrationTest
       working-directory: ./StackOverflowTagsTest
+
+    - name: Lint
+      run: dotnet format --verify-no-changes --verbosity diagnostic
 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
