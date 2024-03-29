@@ -28,7 +28,7 @@ namespace StackOverflowTag.Controllers
         }
 
         [HttpPost("retrieve")]
-        public async Task<IActionResult> RetrieveTags([FromQuery] int amount)
+        public async Task<IActionResult> RetrieveTags([FromQuery] int amount = 1000)
         {
             if (amount <= 0)
             {
